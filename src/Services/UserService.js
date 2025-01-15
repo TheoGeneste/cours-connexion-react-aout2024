@@ -10,7 +10,11 @@ function login(user) {
   return axios.post(config.url+'/api/login', user);
 }
 
+function getUser(){
+  return axios.get(config.url+'/api/me');
+}
 export default {
   addUser,
-  login
+  login,
+  getUser
 };
